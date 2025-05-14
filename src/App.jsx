@@ -1,4 +1,4 @@
-import Addjob from "./Components/Addjob";
+import AddJob from "./Components/AddJob";
 import Homepage from "./Components/Homepage"
 import { Routes, Route } from 'react-router-dom';
 import JobDetails from "./Components/JobDetails";
@@ -13,7 +13,7 @@ function App() {
     <>
    <Routes>
     <Route path="/" element={<Homepage/>}/>
-    <Route path="/add-job" element={<Addjob/>}/>
+    <Route path="/add-job" element={<AddJob/>}/>
     <Route path="/job/:id" element={<JobDetails/>}/>
    </Routes>
    <ToastContainer position="top-right" autoClose={3000} />

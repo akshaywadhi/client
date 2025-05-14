@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import Navbar from './Navbar';
 import { useNavigate } from 'react-router-dom';
 
-export default function Addjob() {
+export default function AddJob() {
   const [form, setForm] = useState({
     title: '',
     company: '',

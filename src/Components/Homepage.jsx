@@ -3,16 +3,17 @@ import Navbar from './Navbar';
 import Addjob from './Addjob';
 import { axiosInstance } from '../utils/axiosInstance';
 import { ClipLoader } from "react-spinners";
+import { useNavigate } from 'react-router-dom';
 
 export default function Homepage() {
 
-  const [showForm, setShowForm] = useState(false)
+ 
   const [jobs, setJobs] = useState([])
   const [loading, setLoading] = useState(true);
   const [searchText, setSearchText] = useState('')
   const [filterJobs, setFilterJobs] = useState([])
 
-
+const navigate = useNavigate()
 
 
   useEffect(() => {
@@ -84,7 +85,7 @@ function refresh(){
 
           </div>
       <div className='mt-4'>
-      <button className="btn btn-primary" onClick={() => setShowForm(true)}>Add Job</button>
+      <button className="btn btn-primary" onClick={() => navigate('/add-job')}>Add Job</button>
       <button className='btn btn-danger mx-4' onClick={refresh}>Refresh Page</button>
     </div>
         </div>
@@ -95,13 +96,7 @@ function refresh(){
       /* add jobs here */
      }
 
-     {
-      showForm && (
-        <>
-        <Addjob setShowForm={setShowForm} fetchJobs={fetchJobs}/>
-        </>
-      )
-     }
+  
 
 
      {

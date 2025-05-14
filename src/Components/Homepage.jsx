@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
-import Addjob from './Addjob';
+
 import { axiosInstance } from '../utils/axiosInstance';
 import { ClipLoader } from "react-spinners";
 import { useNavigate } from 'react-router-dom';

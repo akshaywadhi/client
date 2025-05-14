@@ -43,8 +43,10 @@ export default function AddJob() {
   return (
     <>
     <Navbar/>
-    <div className="d-flex justify-content-center align-items-center w-50 mx-auto px-3">
+
     <div className="container my-4">
+          <div className="d-flex justify-content-center">
+               <div className="col-12 col-md-8 col-lg-6">
       <h2 className="mb-4 text-center">Add New Job</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -101,6 +103,7 @@ export default function AddJob() {
     
       </form>
            
+    </div>
     </div>
     </div>
     </>
